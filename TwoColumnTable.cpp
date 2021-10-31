@@ -7,9 +7,9 @@ int main() {
     std::string secondColumnTitle = "F";
 
     for (int i = 0; i <= 60; i++) {
-        if (i > 20 && i < 40) {
+        if (i > 20 && i < 30 || i > 30 && i < 40) {
             std::cout << "-";
-        } else if (i == 20 || i == 40 ){
+        } else if (i == 20 || i == 30 || i == 40){
             std::cout << "|";
         } else {
             std::cout << " ";
