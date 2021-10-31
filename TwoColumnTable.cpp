@@ -10,8 +10,6 @@ int main() {
     int firstColumnTitleSize  = firstColumnTitle.size()  - 1;
     int secondColumnTitleSize = secondColumnTitle.size() - 1;
 
-    std::cout << firstColumnTitleSize << std::endl;
-
     for (int i = 0; i <= 60 + firstColumnTitleSize; i++) {
         if (i > 20 && i < (30 + firstColumnTitleSize) || i > (30 + firstColumnTitleSize) && i < 40 + firstColumnTitleSize + secondColumnTitleSize) {
             std::cout << "-";
