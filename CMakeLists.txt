@@ -4,3 +4,4 @@ project(myCppTools)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(TwoColumnTable TwoColumnTable.cpp)
+add_executable(TwoColumnTableClassAndVoids TwoColumnTableClass.cpp)
