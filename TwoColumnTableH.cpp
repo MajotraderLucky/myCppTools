@@ -3,6 +3,7 @@
 
 int main() {
     ConsolTable initTable;
-    initTable.setColumn("F", "J");
     initTable.createHorisontalLine();
+    initTable.createTwoColumn();
+    initTable.createFooter();
 }

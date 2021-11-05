@@ -5,26 +5,23 @@
 
 class ConsolTable
 {
-private:
-    std::string firstColumnTitle;
-    std::string secondColumnTitle;
-    int titleColumn_1Size;
-    int titleColumn_2Size;
-
 public:
-    void setColumn (std::string nameColumn_1, std::string nameColumn_2) {
-        firstColumnTitle = nameColumn_1;
-        secondColumnTitle = nameColumn_2;
-        titleColumn_1Size = firstColumnTitle.size();
-        titleColumn_2Size = secondColumnTitle.size();
-    }
+    std::string firstColumnTitle = "Fioiioo";
+    std::string secondColumnTitle = "Jii";
+    int titleColumn_1Size = firstColumnTitle.size();
+    int titleColumn_2Size = secondColumnTitle.size();
+    int increaseLine = titleColumn_1Size + titleColumn_2Size - 2;
+    int increaseFirstColumn = titleColumn_1Size - 1;
+
     void getColumn() {
       std::cout << firstColumnTitle << " : " << secondColumnTitle << std::endl;
       std::cout << "Size column_1 title = " << titleColumn_1Size << " ; and size column_2 title = " << titleColumn_2Size << std::endl;
     }
+
     void createHorisontalLine() {
-        for (int i = 0; i <= 60; ++i) {
-            if (i >= 20 && i <= 40) {
+        ConsolTable initIncreaseLine;
+        for (int i = 0; i <= 60 + increaseLine; ++i) {
+            if (i >= 20 && i <= 40 + increaseLine) {
                 std::cout << "-";
             } else {
                 std::cout << " ";
@@ -33,18 +30,33 @@ public:
         std::cout << std::endl;
     }
     void createTwoColumn() {
-        ConsolTable initVar;
+
         for (int i = 0; i <= 60; ++i) {
             if (i == 20 || i == 30 || i == 40) {
                 std::cout << "|";
             } else if (i == 25) {
-                initVar.firstColumnTitle;
+                std::cout << firstColumnTitle;
             } else if (i == 35) {
-                initVar.secondColumnTitle;
+                std::cout << secondColumnTitle;
             } else {
                 std::cout << " ";
             }
         }
+        std::cout << std::endl;
+    }
+    void createFooter() {
+        for (int i = 0; i <= 60 + increaseLine; ++i) {
+            if ((i > 20 && i < 30 + increaseFirstColumn) || (i > 30 + increaseFirstColumn && i < 40 + increaseLine)) {
+                std::cout << "-";
+            } else if (i == 30 + increaseFirstColumn) {
+                std::cout << "+";
+            } else if (i == 20 || i == 40 + increaseLine) {
+                std::cout << "|";
+            } else {
+                std::cout << " ";
+            }
+        }
+        std::cout << std::endl;
     }
 };
 
