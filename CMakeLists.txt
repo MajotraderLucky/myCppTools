@@ -5,3 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(TwoColumnTable TwoColumnTable.cpp)
 add_executable(TwoColumnTableClassAndVoids TwoColumnTableClass.cpp)
+add_executable(TwoColumnTableH TwoColumnTableH.cpp)
+add_executable(TwoColumnTableClassH ClassesAndVoids.h)
