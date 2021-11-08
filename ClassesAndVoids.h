@@ -2,6 +2,7 @@
 #define MYCPPTOOLS_CLASSESANDVOIDS_H
 #include <sstream>
 #include <string>
+#include <iostream>
 
 class ConsolTable
 {
@@ -12,6 +13,19 @@ public:
     int titleColumn_2Size = secondColumnTitle.size();
     int increaseLine = titleColumn_1Size + titleColumn_2Size - 2;
     int increaseFirstColumn = titleColumn_1Size - 1;
+
+    //The Celsius to Fahrenheit converter variables are listed below
+    float lowerLimit = 0.0f;
+    float upperLimit = 0.0f;
+    float scaleStep  = 0.0f;
+
+    void floatToString() {
+        std::ostringstream ss;
+        ss << lowerLimit;
+        std::string llToString(ss.str());
+        int llToStrSize = llToString.size();
+        std::cout << "String length = " << llToStrSize << std::endl;
+    }
 
     void getColumn() {
       std::cout << firstColumnTitle << " : " << secondColumnTitle << std::endl;
