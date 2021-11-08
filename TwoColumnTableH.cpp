@@ -8,5 +8,5 @@ int main() {
     initTable.createTwoColumn();
     initTable.createFooter();
 
-   initTable.floatToString();
+    initTable.floatToString();
 }
