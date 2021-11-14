@@ -18,7 +18,7 @@ public:
     int centerFirstColumn = 25;
 
     void convertToFah() {
-        fahrenheit = 32.0f +(lowerLimit * 1.8f);
+        fahrenheit = 32 +int(lowerLimit * 1.8f);
     }
 
     void howManyChar(int cels, int fahr) {
