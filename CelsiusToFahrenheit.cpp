@@ -5,9 +5,9 @@ class FahrenheitConverter {
 public:
     float celsius           = 0.0f;
     float fahrenheit        = 0.0f;
-    float startLowerLimit   = -60.0f;
+    float startLowerLimit   = -20.0f;
     float lowerLimit = startLowerLimit;
-    float startUpperLimit   = 40.0f;
+    float startUpperLimit   = 20.0f;
     float upperLimit = startUpperLimit;
     float scaleStep = 1;
 
@@ -77,7 +77,7 @@ int main() {
         //Here you need to enter a cycle for drawing two columns of the table.
 
         for(int j = 0; j <= 60; ++j) {
-            if (initConvert.celsius <= -10) {
+            if (initConvert.celsius <= -10 && initConvert.celsius > -100) {
                 if (j == 20 || j == 30 || j == 40) {
                     std::cout << "|";
                 } else if (j == 25) {
@@ -107,10 +107,30 @@ int main() {
                 } else {
                     std::cout << " ";
                 }
-            } else if(initConvert.celsius >= 10) {
+            } else if(initConvert.celsius >= 10 && initConvert.celsius < 100) {
                 if (j == 20 || j == 31 || j == 40) {
                     std::cout << "|";
                 } else if (j == 26) {
+                    std::cout << initConvert.celsius;
+                } else if (j == 35) {
+                    std::cout << initConvert.fahrenheit;
+                } else {
+                    std::cout << " ";
+                }
+            } else if(initConvert.celsius < -99) {
+                if (j == 20 || j == 29 || j == 40) {
+                    std::cout << "|";
+                } else if (j == 25) {
+                    std::cout << initConvert.celsius;
+                } else if (j == 35) {
+                    std::cout << initConvert.fahrenheit;
+                } else {
+                    std::cout << " ";
+                }
+            } else if(initConvert.celsius >= 100) {
+                if (j == 20 || j == 30 || j == 40) {
+                    std::cout << "|";
+                } else if (j == 25) {
                     std::cout << initConvert.celsius;
                 } else if (j == 35) {
                     std::cout << initConvert.fahrenheit;
