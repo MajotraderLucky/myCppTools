@@ -82,7 +82,9 @@ int main() {
                     std::cout << "|";
                 } else if (j == 25) {
                     std::cout << initConvert.celsius;
-                }  else if (j == 35) {
+                }  else if (j == 35 && initConvert.fahrenheit < 0) {
+                    std::cout << initConvert.fahrenheit;
+                } else if (initConvert.fahrenheit >= 0 && j == 36) {
                     std::cout << initConvert.fahrenheit;
                 } else {
                     std::cout << " ";
