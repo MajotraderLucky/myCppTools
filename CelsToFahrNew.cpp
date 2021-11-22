@@ -12,6 +12,11 @@ class FahrenheitConverter {
     float upperLimit = startUpperLimit;
     float scaleStep = 1;
 
-    void convertToFah() {
-        fahrenheit = 32 +int(lowerLimit * 1.8f);
+    void convertToFahr() {
+        fahrenheit = 32 + int(lowerLimit * 1.8f);
+    }
 };
+
+    int main() {
+
+    }
