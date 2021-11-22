@@ -5,7 +5,7 @@ class FahrenheitConverter {
 public:
     float celsius           = 0.0f;
     float fahrenheit        = 0.0f;
-    float startLowerLimit   = -20.0f;
+    float startLowerLimit   = -50.0f;
     float lowerLimit = startLowerLimit;
     float startUpperLimit   = 20.0f;
     float upperLimit = startUpperLimit;
@@ -84,7 +84,9 @@ int main() {
                     std::cout << initConvert.celsius;
                 }  else if (j == 35 && initConvert.fahrenheit < 0) {
                     std::cout << initConvert.fahrenheit;
-                } else if (initConvert.fahrenheit >= 0 && j == 36) {
+                } else if ((initConvert.fahrenheit >= 0 && initConvert.fahrenheit < 10) && j == 36) {
+                    std::cout << initConvert.fahrenheit;
+                } else if (initConvert.fahrenheit > 9 && j == 35) {
                     std::cout << initConvert.fahrenheit;
                 } else {
                     std::cout << " ";
@@ -94,26 +96,26 @@ int main() {
                     std::cout << "|";
                 } else if (j == 26) {
                     std::cout << initConvert.celsius;
-                } else if (j == 35) {
+                } else if ((initConvert.celsius > -10) && j == 36) {
                     std::cout << initConvert.fahrenheit;
                 } else {
                     std::cout << " ";
                 }
-            } else if(initConvert.celsius >= 0 && initConvert.celsius < 10) {
+            } else if(initConvert.celsius >= 0) {
                 if (j == 20 || j == 32 || j == 40) {
                     std::cout << "|";
                 } else if (j == 27) {
                     std::cout << initConvert.celsius;
-                } else if (j == 35) {
+                } else if (j == 37) {
                     std::cout << initConvert.fahrenheit;
                 } else {
                     std::cout << " ";
                 }
-            } else if(initConvert.celsius >= 10 && initConvert.celsius < 100) {
-                if (j == 20 || j == 31 || j == 40) {
+            } else if (initConvert.celsius >= 10 && initConvert.celsius < 100) {
+                if (j == 20 || j == 30 || j == 40) {
                     std::cout << "|";
-                } else if (j == 26) {
-                    std::cout << initConvert.celsius;
+                } else if (j == 25) {
+                    std::cout <<  initConvert.celsius;
                 } else if (j == 35) {
                     std::cout << initConvert.fahrenheit;
                 } else {
